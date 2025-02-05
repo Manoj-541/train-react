@@ -1,4 +1,4 @@
-.app{
+/* .app{
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
@@ -52,4 +52,13 @@
     background-color: blue;
     height: 10%;
     width: 100%;
+} */
+
+.prop{
+    box-sizing: border-box;
+    background-color: bisque;
+    align-items: center;
+    justify-items: center;
+    height: auto;
+    width:auto;
 }
