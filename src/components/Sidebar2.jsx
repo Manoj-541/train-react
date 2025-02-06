@@ -1,13 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react'
 
-class Sidebar2 extends Component {
-    render() {
-        return (
-            <div className='side2'>
-                Sidebar2
-            </div>
-        );
-    }
+const Sidebar2 = () => {
+  return (
+    <div className='side2'>Sidebar2</div>
+  )
 }
 
-export default Sidebar2;
+export default Sidebar2

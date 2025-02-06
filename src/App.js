@@ -1,72 +1,151 @@
-import React, {Component}  from 'react' 
-// import CBCPropEX from "./propsex/CBCPropEX"
-import FBCPropEX from "./propsex/FBCPropEx"
+// import React from "react";
+
 // function App() {
+//   // let ele  = React.createElement("div" , {className:"App"} , 
+//   //   React.createElement("h1" ,null, "Header")
+//   // )
+//   let username = "Maheshwari";
 //   return (
-//     <div className="App">
-//       <h1 style={{color:"greenyellow"}}>Hi Hello</h1>
-//     </div>
+//     // <div className="App">
+//     //  <h1>Header</h1>
+//     //  <input />
+//     // </div>
+//     // ele
+//   //  <section>
+//   //    <h1>One JSx element</h1>
+//   //   <p>lorm3
+//   //   </p>
+//   //  </section>
+// <div>
+// <h1>{username}</h1>
+//   <p>{100+100}</p>
+// </div>
 //   );
 // }
-
 // export default App;
-// //! component composition
+
+// ! components
+
+// !CBC
+// import React from "react";
+// class App extends React.Component{
+//   render(){
+//     return(
+//       <h1>Class based component</h1>
+//     )
+//   }
+// }
+// export default App;
+
+// ! FBC
+
+// function App(){
+//   return(
+//     <h1>Function based component</h1>
+//   )
+// }
+// export default App;
+
+//! OR
+
+// const App=()=>{
+//   return(
+//     <h1>Arrow function component</h1>
+//   )
+// }
+// export default App;
+
+// ! component composition
+// import React from 'react'
 // import Navbar from './components/Navbar'
 // import Main from './components/Main'
 // import Sidebar1 from './components/Sidebar1'
 // import Sidebar2 from './components/Sidebar2'
 // import Footer from './components/Footer'
-import './global.css'
-
-// const App = () =>{
+// const App = () => {
 //   return (
 //     <div className='app'>
-//       <Navbar />
+//       <Navbar/>
 //       <Main/>
 //       <div className='sidebar'>
-//         <Sidebar1/>
-//         <Sidebar2/>
+//       <Sidebar1/>
+//       <Sidebar2/>
 //       </div>
 //       <Footer/>
-//       </div>
-// )}
+//     </div>
+//   )
+// }
 
+// export default App
 
-
+// !props
+// import React, { Component } from 'react'
+// import CBCPropEx from './propsex/CBCPropEx'
+// import FBCPropEx from './propsex/FBCPropEx'
 
 // export default class App extends Component {
 //   render() {
 //     return (
-//       <div>App</div>
-//     )
-//   }
-// }
-// //! props
-// export default class App extends Component{
-//   render(){
-//     return (
 //       <div>
-//         <CBCPropEX
-//         username="manoj"
-//         age = {20}
-//         hobbies = {["playing","reading books"]}
-//         address = {{city:"kamareddy", area:"Godown Road"}}
-//         sendFun={function(){
-//           alert("hi i am Manoj")
-//         }}
+//         {/* <CBCPropEx 
+//         username="Vamshi"
+//         age={20}
+//         hobbies={["Playing" , "reading books" , "stock"]}
+//         address={{city:"sircilla", area:"Gandinagar"}}
+//         sendFun={function(){alert("hi i am vamshi")}}
+//         /> */}
+
+//         <FBCPropEx 
+//         username="Abhinay"
+//         isMarried={true}
+//         hobbies={["Chatting" , "Reading" , "Eating" , "Sleeping"]}
 //         />
 //       </div>
 //     )
 //   }
-// } 
-function App(){
+// }
+
+
+// !props children
+// import React from 'react'
+// import PropChildEx from './propsex/PropChildEx'
+// import SubChild from './propsex/SubChild'
+// import Child1 from './propsex/Child1'
+
+
+// const App = () => {
+//   return (
+//     <div>
+//     app
+//       {/* <PropChildEx num={1000}>
+//         <h1>this is data coming from props children</h1>
+//         <SubChild/>
+//       </PropChildEx> */}
+//       <Child1 university="Mallareddy university"/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+// ! state examples
+import React from 'react'
+// import CBCStateEx from './stateexample/CBCStateEx'
+import FBCStateEX from './stateexample/FBCStateEX'
+
+
+const App = () => {
   return (
     <div>
-      <FBCPropEX
-      username = "Manoj"
-      isReading = {true}
-      hobbies = {["playing","reading books"]}/>
-    </div>
+      <h1>State Example</h1>
+      <br/>
+       {/* <CBCStateEx/>  */}
+       <FBCStateEX/>
+       </div>
   )
 }
-export default App;
+
+export default App
+
+
+
