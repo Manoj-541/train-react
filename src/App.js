@@ -129,19 +129,35 @@
 // export default App
 
 // ! state examples
-import React from 'react'
-// import CBCStateEx from './stateexample/CBCStateEx'
-import FBCStateEX from './stateexample/FBCStateEX'
+// import React from 'react'
+// // import CBCStateEx from './stateexample/CBCStateEx'
+// import FBCStateEX from './stateexample/FBCStateEX'
+
+
+// const App = () => {
+//   return (
+//     <div>
+//       <h1>State Example</h1>
+//       <br/>
+//        {/* <CBCStateEx/>  */}
+//        <FBCStateEX/>
+//        </div>
+//   )
+// }
+
+// export default App
+
+// ! Effect example
+import React from "react";
+import UseEffectEx from "./effectexample/UseEffectEx";
 
 
 const App = () => {
   return (
-    <div>
-      <h1>State Example</h1>
-      <br/>
-       {/* <CBCStateEx/>  */}
-       <FBCStateEX/>
-       </div>
+    <div>UseEffect example
+      <br/><br/>
+      <UseEffectEx/>
+    </div>
   )
 }
 
