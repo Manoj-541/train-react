@@ -148,15 +148,30 @@
 // export default App
 
 // ! Effect example
+// import React from "react";
+// import UseEffectEx from "./effectexample/UseEffectEx";
+
+
+// const App = () => {
+//   return (
+//     <div>UseEffect example
+//       <br/><br/>
+//       <UseEffectEx/>
+//     </div>
+//   )
+// }
+
+// export default App
+//! useRef example
 import React from "react";
-import UseEffectEx from "./effectexample/UseEffectEx";
+import RefExamples from "./hookexamples/RefExamples";
+
 
 
 const App = () => {
   return (
-    <div>UseEffect example
-      <br/><br/>
-      <UseEffectEx/>
+    <div>
+      <RefExamples/>
     </div>
   )
 }
