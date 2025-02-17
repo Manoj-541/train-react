@@ -1,5 +1,5 @@
 import React from 'react'
-import Styles from "./navbar.module.css";
+import Styles from "./navabr.module.css";
 const Logo = () => {
   return (
     <div className={Styles.logoBlock}>

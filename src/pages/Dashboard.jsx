@@ -1,45 +1,63 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Dashboard = () => {
+  const [username ,setUsername] =useState('');
+  const [mail ,setMail] =useState('');
+  const [psw ,setPsw] =useState('');
+  const [gender ,setGender] =useState('');
+  const [address ,setAddress] =useState('');
+  const [country ,setCountry] =useState('');
+  const [file ,setFile] =useState('');
+
+  let handleGenderChange=e=>{
+    setGender(e.target.value)
+  }
+
+  let handleSubmit=e=>{
+    e.preventDefault();
+    console.log({username , mail , psw ,gender , address , country , file});
+  }
   return (
-    <div>Dashboard
-        <br/>
-        <br/>
+    <div>
+      <form onSubmit={handleSubmit}>
+        <input type="text" placeholder='username'
+        value={username}
+        onChange={(e)=>setUsername(e.target.value)}
+        /> <br/>
+        <input type="email" placeholder='Email'
+         value={mail}
+         onChange={(e)=>setMail(e.target.value)}
+        /> <br/>
+        <input type="password" placeholder='password'
+        value={psw}
+        onChange={(e)=>setPsw(e.target.value)}
+        /> <br/>
 
-      <form>
-        <label>Username:</label>
-        <input type="text" name="username" placeholder="username"/>  <br/>
-        <label>Email:</label>
-        <input type="email" name="usermail"   placeholder="email"/>  <br/>
-        <label>Password:</label>
-        <input type="password" name="userpass"  placeholder="password"/>  <br/>
-        <label>Gender:
-        </label>
-        <input type="radio" name="gender" value="male" />
-        <label>Male</label>
-        <input type="radio" name="gender" value="female" />
-        <label>Female</label>
-        <input type = "radio" name="gender" value="others"/>
-        <label>Others</label>
-        <br/>
-        <label>Address:</label>
-        <textarea name="address"  placeholder="address" />
-        <br/><br/>
-        <label>File:</label>
-        <input type="file" name="file" />
-        <br/>
-        <label>Country:</label>
-        <select name="country">
+        <input type="radio"  name='gender' checked={gender === "male"} value="male" onChange={handleGenderChange}/><label htmlFor="">Male</label>
+        <input type="radio"  name='gender' checked={gender === "female"} value="female" onChange={handleGenderChange}/><label htmlFor="">Female</label>
+        <input type="radio"  name='gender' checked={gender === "others"} value="others" onChange={handleGenderChange}/><label htmlFor="">Others</label>
+        <br />
+        <textarea name="" id="add" 
+        value={address}
+        onChange={(e)=>setAddress(e.target.value)}
+        ></textarea>
+        <br />
+        <select name="" id="country"
+        value={country}
+        onChange={(e)=>setCountry(e.target.value)}
+        >
+          <option value="">---country---</option>
           <option value="india">India</option>
-          <option value="china">China</option>
-          <option value="pakistan">Pakistan</option>
-          <option value="srilanka">Srilanka</option>
-          </select>
-          <br/>
-          <br/>
-
-        <input type="submit" value="Submit"/>
-
+          <option value="pakisthan">Pakisthan</option>
+          <option value="China">China</option>
+        </select>
+        <br />
+        <input type="file" 
+        value={file}
+        onChange={(e)=>setFile(e.target.value)}
+        />
+        <br />
+        <input type="submit" value="SignUp" />
       </form>
     </div>
   )

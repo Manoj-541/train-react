@@ -1,5 +1,5 @@
 import React from 'react'
-import Styles from "./navbar.module.css";
+import Styles from "./navabr.module.css";
 import {Link} from "react-router-dom"
 const Menu = () => {
   return (
@@ -12,7 +12,7 @@ const Menu = () => {
             <li><Link to="/calender">Calender</Link></li>
             <li><Link to="/news">News</Link></li>
             <li><Link to="/blog">Blog</Link></li>
-            <li><Link to="/profile">Profile</Link></li>
+            <li><Link to='/profile'>Profile</Link></li>
         </ul>
     </div>
   )
